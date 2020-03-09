@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  analyser:
+    build: .
+    image: analyser
+    container_name: analyser_srv
+    command: python analyser.py
+    volumes:
+      - ./Input:/Input
+      - ./Output:/Output
